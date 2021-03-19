@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { URL, SEARCH_PHOTOS_URL, ENDPOINT } from "../url/url.js";
+import { SEARCH_PHOTOS_URL } from "../url/url.js";
 import axios from "axios";
 import "./Search.css";
 
 const Photos = () => {
   const [value, setValue] = useState("");
   const [data, setData] = useState([]);
+  console.log(value, "ourvalue");
 
+  const URL = `${SEARCH_PHOTOS_URL}&tags=animal&text=${value}`;
+  console.log(URL, "555");
   const handleClick = (ev) => {
     ev.preventDefault();
     searchUsers();
@@ -31,39 +34,37 @@ const Photos = () => {
   };
 
   return (
-    <div className="wrapper">
-        <div className="container">
-            <div className="body">
-                <div className="block-search">
-                    <input
-                        type="text"
-                        className="input"
-                        onChange={handleChange}
-                        value={value}
-                        />
-                    <button className="btn-search" onClick={handleClick}>
-                        Search
-                    </button>
-                </div>
-                <div className="image-container">
-                    {data.map((pic) => {
-                    return (
-                    <img
-                        className="image-design"
-                        key={pic.id}
-                        alt="animals"
-                        src={`https://farm${pic.farm}.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}.jpg`}
-                    />
-                    );
-                    })}
-                </div>
-                <div className="drap-drop">
-                    <div className="item-drop"></div>
-                    <div className="item-drop"></div>
-                </div>
-                <div className="show-item"></div>
-            </div>
-        </div>
+    <div className="body">
+      <div className="block-search">
+        <input
+          type="text"
+          className="input"
+          onChange={handleChange}
+          value={value}
+        />
+        <button className="btn-search" onClick={handleClick}>
+          Search
+        </button>
+      </div>
+      <div className="image-container">
+        {data.map((pic) => {
+          return (
+            <img
+              className="image-design"
+              key={pic.id}
+              alt="animals"
+              src={`https://farm${pic.farm}.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}.jpg`}
+            />
+          );
+        })}
+      </div>
+      <div className="tag-container">
+        <p className="tag-item">cat</p>
+        <p className="tag-item">dog</p>
+      </div>
+      <div>
+        
+      </div>
     </div>
   );
 };

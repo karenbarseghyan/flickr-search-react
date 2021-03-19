@@ -2,76 +2,73 @@
 html,body{height: 100%; width:100%}
 a:focus, a:active {outline:none}
 
-.wrapper{
-    /*position: relative;*/
-    padding: 20px 0 20px 0;
-    margin: 0 auto;
-    width: 80%;
-    height: 80%;
-    background: #c9e9f0;
-
-}
 .container{
 
     /*position: relative;*/
     width: 90%;
-    height: 320px;
+    height: 800px;
     margin: 10px auto;
-    border: 1.2px solid #86d8eb;
+    border: 1.2px solid #dee8ec;
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /*position: relative;*/
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+    padding: 30px;
+    background: #e5e9eb;
+    margin:50px;
+  
 }
 
 .block-search {
-    height: 8%;
-    border: 1px solid black
+    padding: 10px;
+    background-color: #dee8ec;
+  
 }
 
 .input {
-    width: 90%;
-    margin-right: 5px;
+    width: 80%;
+    padding:7px;
+    border: 1px solid grey;
+}
+
+.btn-search {
+    padding: 7px;
+    margin-left: 5px;
+    border: 1px solid black;
+    display: inline-block;
 }
 
 .image-container {
-    /*position: relative;*/
-    border: 1px solid black;
-    height: 42%;
-    margin: 10px 0 10px 0;
+    position: relative;
+    padding: 25px;
+    min-height:300px;
+    background-color: #dee8ec;
+    border: 2px dashed rgb(166, 210, 252)
 
 }
 
-.drap-drop {
-    display: inline;
-    border: 1px solid black;
-    height: 25%;
-
-}
-.item-drop1 {
-    border: 1px solid black;
-    width: 50%;
-    float:left;
-}
-.item-drop2 {
-    border: 1px solid black;
-    width: 50%;
-    float:right;
-}
 .show-item {
     border: 1px solid black;
     height: 25%;
 }
 
+.tag-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
 .image-design {
-    max-width: 70px;
-    max-height: 150px;
-    padding: 1px 1px 1px 1px;
+    width:120px;
+    height: 150px;
+    padding: 5px;
+}
+
+.tag-item {
+    color:white;
+    font-weight: 800;
+    padding: 25px;
+    background: green;
+    min-width: 200px;
+    border-radius: 15px;
+
 }
