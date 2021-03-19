@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SEARCH_PHOTOS } from "../url/url.js";
 import axios from "axios";
+import "./Search.css";
 
 const Photos = () => {
   const [value, setValue] = useState("");
@@ -30,23 +31,40 @@ const Photos = () => {
   };
 
   return (
-    <>
-      <div className="search">
-        <input className="input" onChange={handleChange} value={value} />
-        <button onClick={handleClick}>Search</button>
-      </div>
-      <div className="picture">
-        {data.map((pic) => {
-          return (
-            <img
-              key={pic.id}
-              alt="animals"
-              src={`https://farm${pic.farm}.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}.jpg`}
+    <div className="wrapper">
+      <div className="container">
+        <div className="body">
+          <div className="block-search">
+            <input
+              type="text"
+              className="input"
+              onChange={handleChange}
+              value={value}
             />
-          );
-        })}
+            <button className="btn-search" onClick={handleClick}>
+              Search
+            </button>
+          </div>
+          <div className="image-container">
+            {data.map((pic) => {
+              return (
+                <img
+                  className="image-design"
+                  key={pic.id}
+                  alt="animals"
+                  src={`https://farm${pic.farm}.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}.jpg`}
+                />
+              );
+            })}
+          </div>
+          <div className="drap-drop">
+            <div className="item-drop"></div>
+            <div className="item-drop"></div>
+          </div>
+          <div className="show-item"></div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
