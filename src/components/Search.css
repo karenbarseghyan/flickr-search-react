@@ -15,7 +15,7 @@ a:focus, a:active {outline:none}
 
     /*position: relative;*/
     width: 90%;
-    height: 92%;
+    height: 320px;
     margin: 10px auto;
     border: 1.2px solid #86d8eb;
 }
@@ -32,37 +32,46 @@ a:focus, a:active {outline:none}
 }
 
 .block-search {
-    height: 10%;
+    height: 8%;
     border: 1px solid black
 }
 
 .input {
     width: 90%;
-    height: 20%;
     margin-right: 5px;
 }
 
 .image-container {
     /*position: relative;*/
     border: 1px solid black;
-    height: 100px;
+    height: 42%;
     margin: 10px 0 10px 0;
 
 }
 
 .drap-drop {
+    display: inline;
     border: 1px solid black;
-    height: 20px;
+    height: 25%;
 
 }
-.item-drop {
+.item-drop1 {
     border: 1px solid black;
-    height: 30px;
+    width: 50%;
+    float:left;
 }
-
+.item-drop2 {
+    border: 1px solid black;
+    width: 50%;
+    float:right;
+}
+.show-item {
+    border: 1px solid black;
+    height: 25%;
+}
 
 .image-design {
-    max-width: 50px;
+    max-width: 70px;
     max-height: 150px;
     padding: 1px 1px 1px 1px;
 }
