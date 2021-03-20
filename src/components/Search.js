@@ -62,11 +62,9 @@ const Photos = () => {
         <p className="tag-item">cat</p>
         <p className="tag-item">dog</p>
       </div>
-      <div>
+      <div className="merged-container">
         <div className="group-pics-title">Group Pics</div>
-        <div className="group-pics-container">
-
-        </div>
+        <div className="group-pics-container"></div>
       </div>
     </div>
   );

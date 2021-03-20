@@ -68,8 +68,12 @@ a:focus, a:active {outline:none}
     font-weight: 800;
     padding: 25px;
     background: #5ab7f1;
-    min-width: 200px;
+    min-width: 300px;
     border-radius: 15px;
+}
+
+.merged-container{
+    border: 2px dashed rgb(166, 210, 252)
 }
 
 .group-pics-title {
@@ -79,5 +83,5 @@ a:focus, a:active {outline:none}
 .group-pics-container{
     min-width: 100px;
     min-height: 100px;
-    border: 2px dashed rgb(166, 210, 252)
+    
 }
