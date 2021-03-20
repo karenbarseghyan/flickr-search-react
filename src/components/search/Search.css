@@ -51,11 +51,6 @@ a:focus, a:active {outline:none}
     height: 25%;
 }
 
-.image-design {
-    width:120px;
-    height: 150px;
-    padding: 5px;
-}
 
 .tag-container {
     display: flex;
@@ -65,11 +60,13 @@ a:focus, a:active {outline:none}
 
 .tag-item {
     color:white;
+    text-align: center;
     font-weight: 800;
     padding: 25px;
     background: #5ab7f1;
     min-width: 300px;
     border-radius: 15px;
+    
 }
 
 .merged-container{
@@ -78,6 +75,7 @@ a:focus, a:active {outline:none}
 
 .group-pics-title {
     color:grey;
+    text-align: center;
 }
 
 .group-pics-container{
