@@ -63,7 +63,10 @@ const Photos = () => {
         <p className="tag-item">dog</p>
       </div>
       <div>
-        
+        <div className="group-pics-title">Group Pics</div>
+        <div className="group-pics-container">
+
+        </div>
       </div>
     </div>
   );

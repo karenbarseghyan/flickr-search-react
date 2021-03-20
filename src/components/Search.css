@@ -51,15 +51,15 @@ a:focus, a:active {outline:none}
     height: 25%;
 }
 
-.tag-container {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 5px;
-}
-
 .image-design {
     width:120px;
     height: 150px;
+    padding: 5px;
+}
+
+.tag-container {
+    display: flex;
+    justify-content: space-evenly;
     padding: 5px;
 }
 
@@ -67,8 +67,17 @@ a:focus, a:active {outline:none}
     color:white;
     font-weight: 800;
     padding: 25px;
-    background: green;
+    background: #5ab7f1;
     min-width: 200px;
     border-radius: 15px;
+}
 
+.group-pics-title {
+    color:grey;
+}
+
+.group-pics-container{
+    min-width: 100px;
+    min-height: 100px;
+    border: 2px dashed rgb(166, 210, 252)
 }
