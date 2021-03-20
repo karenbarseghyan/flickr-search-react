@@ -3,37 +3,34 @@ import { SEARCH_PHOTOS_URL } from "../../url/url.js";
 import axios from "axios";
 import "./Search.css";
 import Image from '../images/Image.js'
+import Tags from '../tags/Tags.js'
 
 const Photos = () => {
   const [value, setValue] = useState("");
   const [data, setData] = useState([]);
-  console.log(value, "ourvalue");
+  const [tags, setTags] = useState([]);
 
   const URL = `${SEARCH_PHOTOS_URL}&tags=animal&text=${value}`;
-  console.log(URL, "555");
   const handleClick = (ev) => {
     ev.preventDefault();
     searchUsers();
-    console.log(URL, value.trim());
   };
 
   const handleChange = (ev) => {
     setValue(ev.target.value);
+    setTags(ev.target.value.trim().split(" "));
   };
+  console.log(tags);
 
   const searchUsers = async (ev) => {
     try {
       const response = await axios.get(URL);
       const data = await response;
-      console.log(data);
       setData(data.data.photos.photo);
-      console.log(data.data.photos);
-      console.log(data.data.photos.photo[0].id);
     } catch (e) {
       console.log(e);
     }
   };
-console.log(data, "dddddddd");
   return (
     <div className="body">
       <div className="block-search">
@@ -51,8 +48,7 @@ console.log(data, "dddddddd");
         {data.length > 0 && <Image imageData={data} />}
       </div>
       <div className="tag-container">
-        <p className="tag-item">cat</p>
-        <p className="tag-item">dog</p>
+        <Tags tagsData={tags} />
       </div>
       <div className="merged-container">
         <div className="group-pics-title">Group Pics</div>

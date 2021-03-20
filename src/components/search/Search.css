@@ -58,17 +58,6 @@ a:focus, a:active {outline:none}
     padding: 5px;
 }
 
-.tag-item {
-    color:white;
-    text-align: center;
-    font-weight: 800;
-    padding: 25px;
-    background: #5ab7f1;
-    min-width: 300px;
-    border-radius: 15px;
-    
-}
-
 .merged-container{
     border: 2px dashed rgb(166, 210, 252)
 }
