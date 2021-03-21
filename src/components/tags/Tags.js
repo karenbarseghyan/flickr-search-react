@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Tags.css';
+import './Tags.css';
 import { v4 as uuidv4 } from "uuid";
 
 const Tags = (props) => {

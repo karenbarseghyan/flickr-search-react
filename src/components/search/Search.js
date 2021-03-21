@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { SEARCH_PHOTOS_URL } from "../../url/url.js";
 import axios from "axios";
 import "./Search.css";
-import Image from '../images/Image.js'
-import Tags from '../tags/Tags.js'
+// import Image from '../images/Image.js'
+import Tags from '../tags/Tags.js';
+import ImageContainer from '../imageContainer/ImageContainer';
 
 const Photos = () => {
   const [value, setValue] = useState("");
@@ -49,9 +50,7 @@ const Photos = () => {
           Search
         </button>
       </div>
-      <div className="image-container">
-        {data.length > 0 && <Image imageData={data} />}
-      </div>
+      <ImageContainer datas={data} />
       <div className="tag-container">
         <Tags tagsData={tags} />
       </div>

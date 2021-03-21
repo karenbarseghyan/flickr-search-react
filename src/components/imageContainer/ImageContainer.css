@@ -1,0 +1,9 @@
+.image-container {
+    position: relative;
+    padding: 25px;
+    min-height:300px;
+    background-color: #dee8ec;
+    border: 2px dashed rgb(166, 210, 252);
+    margin-bottom: 20px;
+
+}
