@@ -3,7 +3,7 @@ import styles from "./Image.css";
 
 const Image = (props) => {
   return (
-    <div>
+    <>
       {props.imageData.map((pic) => {
         return (
           <img
@@ -14,7 +14,7 @@ const Image = (props) => {
           />
         );
       })}
-    </div>
+    </>
   );
 };
 

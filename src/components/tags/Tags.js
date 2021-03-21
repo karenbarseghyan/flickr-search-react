@@ -4,12 +4,18 @@ import { v4 as uuidv4 } from "uuid";
 
 const Tags = (props) => {
     return (
-        <>
-            {props.tagsData.map((item)=>{
-                return <p key={uuidv4()} className="tag-item">{item}</p>;
-            })}
-        </>
-    )
+      <>
+        <p>
+          {props.tagsData.map((item) => {
+            return (
+              <span key={uuidv4()} className="tag-item">
+                {item}
+              </span>
+            );
+          })}
+        </p>
+      </>
+    );
 }
 
 export default Tags

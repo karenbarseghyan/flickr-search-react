@@ -17,8 +17,13 @@ const Photos = () => {
   };
 
   const handleChange = (ev) => {
-    setValue(ev.target.value);
-    setTags(ev.target.value.trim().split(" "));
+    setValue(ev.target.value);   
+    setTags(
+      ev.target.value
+        .trim()
+        .split(" ")
+        .filter((item) => item.length > 0)
+    );
   };
   console.log(tags);
 
